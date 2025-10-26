@@ -3,6 +3,8 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+package-lock.json
+yarn.lock
 
 # Environment variables
 .env
@@ -29,3 +31,10 @@ build/
 
 # Test coverage
 coverage/
+
+# Client specific
+client/dist/
+client/node_modules/
+
+# Server specific
+server/node_modules/
