@@ -264,6 +264,21 @@ Identifies overbought and oversold conditions.
 - Oversold threshold (default: 30)
 - Overbought threshold (default: 70)
 
+## 🔒 Security
+
+All dependencies have been checked for vulnerabilities and updated to secure versions.
+
+### Security Considerations for Production
+
+This is an educational project. For production deployment, consider implementing:
+
+1. **Rate Limiting**: Add rate limiting middleware (e.g., express-rate-limit) to prevent DoS attacks
+2. **Authentication**: Implement user authentication and authorization (JWT, OAuth, etc.)
+3. **Input Validation**: Add comprehensive input validation and sanitization
+4. **HTTPS**: Use HTTPS in production
+5. **Database Security**: Use connection pooling limits and prepared statements (already implemented)
+6. **CORS**: Configure CORS to only allow specific origins in production
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
