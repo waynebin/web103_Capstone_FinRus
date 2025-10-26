@@ -7,6 +7,11 @@
 
 import BacktestingEngine, { SMAStrategy, RSIStrategy } from './services/backtesting.js';
 
+// Constants for sample data generation
+const UPWARD_BIAS = 0.48; // Bias factor for random walk (< 0.5 creates upward trend)
+const PRICE_VOLATILITY = 2; // Maximum daily price change
+const MAX_VOLUME = 1000000; // Maximum trading volume
+
 // Generate sample historical data
 function generateSampleData(days = 250) {
   const data = [];
@@ -18,12 +23,12 @@ function generateSampleData(days = 250) {
     date.setDate(date.getDate() + i);
 
     // Random walk with slight upward bias
-    const change = (Math.random() - 0.48) * 2;
+    const change = (Math.random() - UPWARD_BIAS) * PRICE_VOLATILITY;
     currentPrice = Math.max(currentPrice + change, 10);
 
     const open = currentPrice;
-    const high = currentPrice + Math.random() * 2;
-    const low = currentPrice - Math.random() * 2;
+    const high = currentPrice + Math.random() * PRICE_VOLATILITY;
+    const low = currentPrice - Math.random() * PRICE_VOLATILITY;
     const close = low + Math.random() * (high - low);
 
     data.push({
@@ -32,7 +37,7 @@ function generateSampleData(days = 250) {
       high: parseFloat(high.toFixed(2)),
       low: parseFloat(low.toFixed(2)),
       close: parseFloat(close.toFixed(2)),
-      volume: Math.floor(Math.random() * 1000000)
+      volume: Math.floor(Math.random() * MAX_VOLUME)
     });
   }
 
