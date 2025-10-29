@@ -7,8 +7,10 @@ function Home() {
     <div className="home-container">
       <div className="hero-section">
         <h1>Welcome to FinRus</h1>
+        <img src="src/assets/Shark Fin and Market Surge Logo.png" alt="FinRus Logo" className="hero-logo" />
         <p className="hero-subtitle">
-          Your comprehensive financial backtesting and portfolio monitoring platform
+          
+          Your comprehensive financial backtesting and portfolio monitoring platform.
         </p>
       </div>
 

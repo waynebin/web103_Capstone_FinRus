@@ -2,19 +2,37 @@
   max-width: 1200px;
   margin: 0 auto;
 }
-
+.nav-logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
 .hero-section {
   text-align: center;
-  padding: 3rem 0;
+  padding: 1rem 0;
   background: linear-gradient(135deg, #858db0 0%, #2b6b87 100%);
   color: white;
   border-radius: 8px;
   margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-section h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  
+}
+.hero-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.95;
+}
+.hero-logo {
+  width: 200px;
+  margin-bottom: 1rem;
+  display: block;
 }
 
 .hero-subtitle {
@@ -30,7 +48,7 @@
 }
 
 .feature-card {
-  background: white;
+  background: rgb(213, 240, 245);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -122,3 +140,4 @@
 .cta-buttons a {
   text-decoration: none;
 }
+

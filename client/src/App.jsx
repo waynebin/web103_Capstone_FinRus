@@ -13,7 +13,8 @@ function App() {
         <nav className="navbar">
           <div className="nav-container">
             <Link to="/" className="nav-logo">
-              📊 FinRus
+              <img src="src/assets/Shark Fin and Market Surge Logo.png" alt="FinRus Logo" className="nav-logo-img" />
+              FinRus
             </Link>
             <ul className="nav-menu">
               <li className="nav-item">
