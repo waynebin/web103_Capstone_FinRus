@@ -1,23 +1,14 @@
 import pg from 'pg';
-import dotenv from 'dotenv';
-
-dotenv.config();
-
-const { Pool } = pg;
-
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false
-});
-
-// Test database connection
-pool.on('connect', () => {
-  console.log('✅ Connected to PostgreSQL database');
-});
-
-pool.on('error', (err) => {
-  console.error('❌ Unexpected error on idle client', err);
-  process.exit(-1);
-});
-
-export default pool;
+// Connect to a Postgres database
+//One common way to connect to a Postgres database is using a connection pool. A connection pool is a cache of database connections maintained so that the connections can be reused when needed, rather than being opened and closed for each database transaction.
+// //To do this, we need to create a configuration object and pass it to the pg.Pool constructor. Then we can use the connection pool object to query the database by acquiring a client from the pool, executing queries on the client, and then releasing the client back to the pool.
+const config={
+user:process.env.PGUSER,
+password:process.env.PGPASSWORD,
+host:process.env.PGHOST,
+port:process.env.PGPORT,
+database:process.env.PGDATABASE,
+ssl:{rejectUnauthorized:false}
+}
+// Create a new pool instance
+export const pool=new pg.Pool(config)
