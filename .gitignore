@@ -38,3 +38,7 @@ client/node_modules/
 
 # Server specific
 server/node_modules/
+
+#md files
+IMPLEMENTATION_SUMMARY.md
+QUICKSTART.md
