@@ -18,7 +18,11 @@ This unit, be sure to complete all tasks listed below. To complete a task, place
 
 ### 1. What went well during this unit?
 
-[👉🏾👉🏾👉🏾 Using Figma to create detailed wireframes]
+[👉🏾👉🏾👉🏾 Using Figma to create detailed wireframes, 
+ensuring a clear visual representation of our app's layout and functionality.
+We successfully mapped out user flows for key features like backtesting, 
+portfolio management, and strategy analysis, which will guide our 
+development process effectively.]
 
 ### 2. What were some challenges your group faced in this unit?
 
