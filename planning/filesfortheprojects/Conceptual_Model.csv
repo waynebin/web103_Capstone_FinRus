@@ -1,0 +1,49 @@
+erDiagram
+    strategies ||--o{ backtest_results : "executed_in"
+    portfolios ||--o{ portfolio_positions : "has_position"
+
+    strategies {
+        SERIAL id PK
+        VARCHAR name
+        TEXT description
+        VARCHAR type
+        JSONB parameters
+        TIMESTAMP created_at
+    }
+
+    backtest_results {
+        SERIAL id PK
+        INTEGER strategy_id FK
+        VARCHAR symbol
+        DATE start_date
+        DATE end_date
+        DECIMAL initial_capital
+        DECIMAL final_capital
+        DECIMAL total_return
+    }
+
+    portfolios {
+        SERIAL id PK
+        VARCHAR name
+        DECIMAL initial_capital
+        DECIMAL current_capital
+    }
+
+    portfolio_positions {
+        SERIAL id PK
+        INTEGER portfolio_id FK
+        VARCHAR symbol
+        INTEGER quantity
+        DECIMAL average_price
+        DECIMAL unrealized_pnl
+    }
+
+    historical_prices {
+        SERIAL id PK
+        VARCHAR symbol
+        DATE date
+        DECIMAL open
+        DECIMAL close
+        BIGINT volume
+        UNIQUE(symbol, date)
+    }

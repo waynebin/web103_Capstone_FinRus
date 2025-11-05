@@ -1,0 +1,6 @@
+Entity Name,Primary Key (PK),Key Attributes,Notes
+strategies,"id (PK, SERIAL)","name, type, parameters (JSONB)",Defines the trading logic.
+backtest_results,"id (PK, SERIAL)","symbol, start_date, final_capital",Stores performance metrics of a strategy.
+portfolios,"id (PK, SERIAL)","name, initial_capital, current_capital",Represents a collection of assets managed by a user.
+portfolio_positions,"id (PK, SERIAL)","symbol, quantity, average_price",Represents a single holding within a portfolio.
+historical_prices,"id (PK, SERIAL)","symbol, date, open, close",Stores market data for backtesting.

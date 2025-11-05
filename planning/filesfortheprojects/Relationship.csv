@@ -1,0 +1,3 @@
+Relationship,Table 1 (One),Table 2 (Many),Foreign Key
+Strategy Execution,strategies,backtest_results,strategy_id
+Portfolio Holdings,portfolios,portfolio_positions,portfolio_id
